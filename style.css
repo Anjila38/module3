@@ -1,0 +1,82 @@
+body {
+  padding-top: 70px; /* Add padding to body for fixed navbar */
+}
+h1{font-weight: bold;}
+.navbar{background-color: rgb(216, 216, 216);}
+a{color: black !important;}
+
+/* Different background colors and spacing for Chicken, Beef, and Sushi sections */
+.chicken-section {
+  background-color: #fac6c6; /* Chicken section background color (red) */
+}
+
+.beef-section {
+  background-color: #fac6c6; /* Beef section background color (blue) */
+}
+
+.sushi-section {
+  background-color: #fac6c6; /* Sushi section background color (green) */
+}
+
+.box {
+  padding: 20px; /* Add padding for spacing inside each box */
+  text-align: center; /* Center-align text within each box */
+  margin-bottom: 20px; /* Add spacing at the bottom of each box */
+}
+
+/* Proper padding between sections */
+.chicken-section,
+.beef-section,
+.sushi-section {
+  padding-right: 20px; /* Add padding to the right of each box */
+}
+
+.chicken-section h3,
+.beef-section h3,
+.sushi-section h3 {
+  margin-bottom: 20px; /* Add spacing at the bottom of each box title */
+}
+
+/* Display sections side by side for large desktops and laptops */
+@media (min-width: 992px) {
+  .chicken-section,
+  .beef-section,
+  .sushi-section {
+      width: calc(33.3333% - 20px); /* Set width to 1/3 of the container */
+      float: left; /* Float left to display side by side */
+      margin-right: 20px; /* Add spacing to the right of each box */
+  }
+
+  /* Clear the float to prevent layout issues */
+  .container:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+}
+
+@media (max-width: 991px) {
+  .chicken-section,
+  .beef-section,
+  .sushi-section {
+    width: calc(50% - 20px); /* Set width to 50% for tablet view */
+    margin-bottom: 20px; /* Add spacing at the bottom of each box */
+    margin-right: 20px;
+  }
+}
+
+/* Extra styles for mobile view */
+@media (max-width: 767px) {
+  .chicken-section,
+  .beef-section,
+  .sushi-section {
+      width: 100%; /* Set width to 100% for mobile view */
+      margin-right: 0; /* Reset margin-right for full width on mobile */
+  }
+
+  /* Add margin to the bottom of the navbar to avoid overlapping with content */
+  body {
+      padding-bottom: 70px;
+  }
+}
+
